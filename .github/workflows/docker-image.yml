@@ -29,9 +29,9 @@ jobs:
       - name: Log into GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
-      - uses: satackey/action-docker-layer-caching@v0.0.8
-        # Ignore the failure of a step and avoid terminating the job.
-        continue-on-error: true
+#       - uses: satackey/action-docker-layer-caching@v0.0.8
+#         # Ignore the failure of a step and avoid terminating the job.
+#         continue-on-error: true
 
       - name: Build image
         run: docker build . --file base.Dockerfile --tag $IMAGE_NAME
