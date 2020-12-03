@@ -34,7 +34,7 @@ jobs:
         continue-on-error: true
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        run: docker build . --file base.Dockerfile --tag $IMAGE_NAME
 
       - name: Push image to GitHub Container Registry
         run: |
