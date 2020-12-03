@@ -59,7 +59,7 @@ ENV PATH=$ANTSPATH:$AFNIPATH:$FSLDIR/bin:$PATH
 
 COPY --from=docker.pkg.github.com/nipreps/afni/afni:20.3.02 /opt/afni $AFNIPATH
 COPY --from=docker.pkg.github.com/nipreps/fsl/fsl:6.0.4 /opt/fsl $FSLDIR
-COPY --from=docker.pkg.github.com/nipreps/freesurfer/freesurfer:6.0.1 /opt/freesurfer $FREESURFER_HOME
+# COPY --from=docker.pkg.github.com/nipreps/freesurfer/freesurfer:6.0.1 /opt/freesurfer $FREESURFER_HOME
 
 # Installing and setting up miniconda
 RUN curl -sSLO https://repo.continuum.io/miniconda/Miniconda3-4.5.11-Linux-x86_64.sh && \
